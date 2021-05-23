@@ -14,5 +14,10 @@ $payload =json_encode(array("phoneNumber" => $mobile,
                             "hashCode" => "",
                             "resendOtp" =>0));
   curl_setopt($ch, CURL_POSTFIELDS, $payload);
-  curl_setopt($ch, CURL_HTTPHEADER, array('Content)
-  curl_setopt($ch, CURL_
+  curl_setopt($ch, CURL_HTTPHEADER, array('Content-Type:application/json'));
+  curl_setopt($ch, CURL_RETURNTRANSFER, true);
+  curl_close($ch);
+  echo $result."\n";
+   $i++;
+}
+?>
