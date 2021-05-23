@@ -1,7 +1,7 @@
 <?php
-$mobile - argv[1];
-$name = argv[2];
-$count = argv[3];
+$mobile - $argv[1];
+$name = $argv[2];
+$count = $argv[3];
 
 $i=0;
 while($i <= $count)
