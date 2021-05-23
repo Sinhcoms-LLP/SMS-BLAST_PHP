@@ -16,6 +16,7 @@ $payload =json_encode(array("phoneNumber" => $mobile,
   curl_setopt($ch, CURL_POSTFIELDS, $payload);
   curl_setopt($ch, CURL_HTTPHEADER, array('Content-Type:application/json'));
   curl_setopt($ch, CURL_RETURNTRANSFER, true);
+  $result = curl_exec($ch);
   curl_close($ch);
   echo $result."\n";
    $i++;
