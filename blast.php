@@ -1,5 +1,7 @@
+
 <?php
-$mobile - $argv[1];
+
+$mobiles = $argv[1];
 $name = $argv[2];
 $count = $argv[3];
 
@@ -8,8 +10,8 @@ while($i <= $count)
 {
   $url = 'https://services.dealshare.in/userservice/api/v1/send-otp';
   $ch = curl_init($url);
-  
-$payload =json_encode(array("phoneNumber" => $mobile,
+
+ $payload = json_encode(array("phoneNumber" => $mobiles,
                             "name" =>$name,
                             "hashCode" => "",
                             "resendOtp" =>0));
@@ -21,4 +23,4 @@ $payload =json_encode(array("phoneNumber" => $mobile,
   echo $result."\n";
    $i++;
 }
-?>
+
